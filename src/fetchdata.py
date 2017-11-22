@@ -31,3 +31,10 @@ def fetchAppDetails(appid, write=False):
             else:
                 print('AppID \'' + str(appid) + '\' doesn\'t exist.')
         return data
+
+if __name__ == "__main__":
+    for appid in range(4510, 5001):
+        if (appid % 10 == 0):
+            fetchAppDetails(appid, True)
+        else:
+            pass
