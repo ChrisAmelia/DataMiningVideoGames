@@ -1,8 +1,8 @@
-# DataMiningVideoGames:
-![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+# DataMiningVideoGames
+![alt text](http://www.free-icons-download.net/images/steam-logo-icon-65499.png "Logo Title Text 1")
 
 Playing video games is a cool thing. Wouldn't it also be cool that you don't have to look for them?
-What if *a certain thing* suggests you games that you will most likely **love** and **play forever**?
+What if *a certain thing* suggests you games that you will most likely **love** and **play forever**?  
 This is what this project is about: **video game recommendation based on your preferences**.
   
 ## Getting Started
