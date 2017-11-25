@@ -1,0 +1,23 @@
+type
+> name
+steam_appid
+> is_free
+> controller_support
+>> detailed_description
+>> about_the_game
+>> short_description
+> supported_languages
+website
+pc_requirements
+    minimum
+> developers
+    #:
+> publishers
+    #:
+>> categories
+    #:
+        > description:
+    genres:
+        #:
+            > description
+

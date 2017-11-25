@@ -1,0 +1,26 @@
+type "game"
+> name "Counter-Strike: Global Offensive"
+steam_appid 730
+> is_free false
+> controller_support "full"
+>> detailed_description "CS-GO will expand upon the team-based action gameplay..."
+>> about_the_game "..."
+>> short_description ""
+> supported_languages "Czech, Danish, Dutch..."
+website "http://..."
+pc_requirements
+    minimum "Minimum: ..."
+> developers
+    0: "Valve"
+> publishers
+    0: "Valve"
+>> categories
+    0:
+      > description "Multi-player"
+    1:
+      > description "Steam Achivements"
+    ..
+    genres:
+        0:
+            > description "Action"
+
