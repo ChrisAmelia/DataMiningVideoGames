@@ -1,5 +1,8 @@
 # DataMiningVideoGames
-![alt text](http://www.free-icons-download.net/images/steam-logo-icon-65499.png "Logo Title Text 1")
+
+<h1 align="center">
+  <img src="http://www.free-icons-download.net/images/steam-logo-icon-65499.png" alt="steam-logo-free">
+</h1>
 
 Playing video games is a cool thing. Wouldn't it also be cool that you don't have to look for them?
 What if *a certain thing* suggests you games that you will most likely **love** and **play forever**?  
