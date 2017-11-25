@@ -32,9 +32,11 @@ def fetchAppDetails(appid, write=False):
                 print('AppID \'' + str(appid) + '\' doesn\'t exist.')
         return data
 
-if __name__ == "__main__":
-    for appid in range(4510, 5001):
-        if (appid % 10 == 0):
-            fetchAppDetails(appid, True)
-        else:
-            pass
+# To fetch data from Steam API (which authorizes around 200 requests within a short period of seconds).
+# A Steam game's appID is always a multiple of 10 except if it's a beta-game.
+# if __name__ == "__main__":
+    # for appid in range(4510, 5001):
+        # if (appid % 10 == 0):
+            # fetchAppDetails(appid, True)
+        # else:
+            # pass
