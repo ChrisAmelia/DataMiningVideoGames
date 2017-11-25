@@ -18,6 +18,7 @@ This project is based on Steam API, be sure to read:
 
 Python3
   
+  
 ## Running the tests
 
 Location: DataMiningVideoGames/src/tests/  
@@ -26,6 +27,7 @@ In a terminal, run `$ make test` (internet connection required).
 ### Break down into end to end tests
 
 TODO
+  
   
 ## License
 
