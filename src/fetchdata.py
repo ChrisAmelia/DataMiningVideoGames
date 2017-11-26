@@ -34,11 +34,7 @@ def fetchAppDetails(appid, write=False):
         return data
 
 def _filterData(data):
-    """Returns a dictionnary containing filtered data from given data.
-    The filter is applied on labels that are considered 'important' such as
-    the name, details of the game, categories, etc.
-    See res/label.txt, labels that are considered as important are precede
-    by '>' (relevant) or '>>' (very relevant).
+    """See method filterData().
 
     Args:
         data (dict);  return value of the method fetchAppDetails()
@@ -51,21 +47,31 @@ def _filterData(data):
     for key in data:
         appid = key
         break
+    shorcut = data[appid]['data']
     filtered['appid'] = appid
-    filtered['name'] = data[appid]['data']['name']
-    filtered['is_free'] = data[appid]['data']['is_free']
-    filtered['detailed_description'] = data[appid]['data']['detailed_description']
+    filtered['name'] = shorcut['name']
+    filtered['is_free'] = shorcut['is_free']
+    filtered['detailed_description'] = shorcut['detailed_description']
+    filtered['publishers'] = shorcut['publishers']
+    filtered['about_the_game'] = shorcut['about_the_game']
+    filtered['short_description'] = shorcut['short_description']
     return filtered
 
 def filterData():
-    """TODO
+    """Returns a dictionnary containing filtered data from given data.
+    The filter is applied on labels that are considered 'important' such as
+    the name, details of the game, categories, etc.
+    See res/label.txt, labels that are considered as important are precede
+    by '>' (relevant) or '>>' (very relevant).
+
+    Returns:
+        filtered data
     """
     gameList = {}
     try:
         current_path = os.getcwd()
         os.chdir(current_path + "/../res/data/")
         for filename in os.listdir(os.getcwd()):
-            print(filename)
             data = json.load(open(filename))
             filtered = _filterData(data)
             appid = filtered['appid']
@@ -84,3 +90,5 @@ def filterData():
             # fetchAppDetails(appid, True)
         # else:
             # pass
+
+pprint(filterData()['730'])
