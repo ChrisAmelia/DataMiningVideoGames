@@ -53,8 +53,8 @@ def _filterData(data):
     filtered['is_free'] = shorcut['is_free']
     filtered['detailed_description'] = shorcut['detailed_description']
     filtered['publishers'] = shorcut['publishers']
-    filtered['about_the_game'] = shorcut['about_the_game']
-    filtered['short_description'] = shorcut['short_description']
+    # filtered['about_the_game'] = shorcut['about_the_game']
+    # filtered['short_description'] = shorcut['short_description']
     return filtered
 
 def filterData():
@@ -82,7 +82,7 @@ def filterData():
         os.chdir(current_path)
     return gameList
 
-# To fetch data from Steam API (which authorizes around 200 requests within a short period of seconds).
+# Fetch data from Steam API (which authorizes around 200 requests within a short period of seconds).
 # A Steam game's appID is always a multiple of 10 except if it's a beta-game.
 # if __name__ == "__main__":
     # for appid in range(4510, 5001):
@@ -91,4 +91,7 @@ def filterData():
         # else:
             # pass
 
-pprint(filterData()['730'])
+# if __name__ == "__main__":
+    # d = filterData()
+    # with open('filtered_data.json', 'w') as fp:
+        # json.dump(d, fp)
