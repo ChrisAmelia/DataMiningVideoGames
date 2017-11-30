@@ -53,8 +53,8 @@ def _filterData(data):
     filtered['is_free'] = shorcut['is_free']
     filtered['detailed_description'] = shorcut['detailed_description']
     filtered['publishers'] = shorcut['publishers']
-    filtered['about_the_game'] = shorcut['about_the_game']
-    filtered['short_description'] = shorcut['short_description']
+    # filtered['about_the_game'] = shorcut['about_the_game']
+    # filtered['short_description'] = shorcut['short_description']
     return filtered
 
 def filterData():
@@ -91,4 +91,4 @@ def filterData():
         # else:
             # pass
 
-pprint(filterData()['730'])
+pprint(filterData())
