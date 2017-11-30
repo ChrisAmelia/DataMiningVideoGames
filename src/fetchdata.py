@@ -100,9 +100,13 @@ def filterData():
         # else:
             # pass
 
-
 # Test filterData() return values
 # if __name__ == "__main__":
     # d = filterData()
     # pprint(d['900']['categories'][0])
 #     pprint(d['730']['categories'][0])
+
+if __name__ == "__main__":
+    d = filterData()
+    # with open('filtered_data.json', 'w') as fp:
+     #    json.dump(d, fp)
