@@ -82,7 +82,7 @@ def filterData():
         os.chdir(current_path)
     return gameList
 
-# To fetch data from Steam API (which authorizes around 200 requests within a short period of seconds).
+# Fetch data from Steam API (which authorizes around 200 requests within a short period of seconds).
 # A Steam game's appID is always a multiple of 10 except if it's a beta-game.
 # if __name__ == "__main__":
     # for appid in range(4510, 5001):
@@ -92,3 +92,7 @@ def filterData():
             # pass
 
 pprint(filterData())
+# if __name__ == "__main__":
+    # d = filterData()
+    # with open('filtered_data.json', 'w') as fp:
+        # json.dump(d, fp)
