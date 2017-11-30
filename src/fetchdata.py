@@ -53,6 +53,15 @@ def _filterData(data):
     filtered['is_free'] = shorcut['is_free']
     filtered['detailed_description'] = shorcut['detailed_description']
     filtered['publishers'] = shorcut['publishers']
+    if 'categories' in shorcut:
+        filtered['categories'] = shorcut['categories']
+    else:
+        unknown = {}
+        unknown['description'] = 'Unknown'
+        unknown['id'] = -1;
+        l = [];
+        l.append(unknown)
+        filtered['categories'] = l;
     # filtered['about_the_game'] = shorcut['about_the_game']
     # filtered['short_description'] = shorcut['short_description']
     return filtered
@@ -91,4 +100,9 @@ def filterData():
         # else:
             # pass
 
-pprint(filterData())
+
+# Test filterData() return values
+# if __name__ == "__main__":
+    # d = filterData()
+    # pprint(d['900']['categories'][0])
+#     pprint(d['730']['categories'][0])
