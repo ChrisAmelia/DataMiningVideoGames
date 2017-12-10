@@ -38,12 +38,16 @@ def vectorizeData():
     return lst
 
 def cluster_data(lst, display_clusters_key = False):
-    """TODO: Docstring for cluster_data.
-
+    """Cluster the given list (containing game's description and publishers) and
+    returns the vectorizer and the model to train.
     Source: https://stackoverflow.com/questions/27889873/clustering-text-documents-using-scikit-learn-kmeans-in-python
-    :lst: TODO
-    :returns: TODO
 
+    Args:
+        lst (list): game's informations (e.g. ["Best game ever by Valve"]).
+        display_clusters_key (boolean): True to print the clusters' details, else false.
+
+    Returns:
+        a vectorizer and the model to train
     """
     documents = lst
     vectorizer = TfidfVectorizer(stop_words = 'english')
@@ -64,5 +68,7 @@ def cluster_data(lst, display_clusters_key = False):
             for ind in order_centrois[i, :10]:
                 print(" {:s}".format(terms[ind]))
             print()
+
+    return vectorizer, model
 
 cluster_data(vectorizeData(), display_clusters_key = True)
