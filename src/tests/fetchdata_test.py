@@ -32,11 +32,13 @@ class FetchDataMethodsTest(unittest.TestCase):
             path_to_filtered_data = current_path + "/../../res/"
             os.chdir(path_to_filtered_data)
             filename = 'filtered_data.json'
-            filtered = json.load(open(filename, 'r'))
+            f = open(filename, 'r')
+            filtered = json.load(f)
             success_730 = filtered['730']['categories'][0]['description'] == 'Multi-player'
             success_900 = filtered['900']['categories'][0]['description'] == 'Unknown'
             self.assertEqual(success_730, True)
             self.assertEqual(success_900, True)
+            f.close()
         except Exception as e:
             raise e
         finally:
